@@ -1,13 +1,12 @@
-import {Source} from './source'
+import { Source } from "./source";
 
 export interface Article {
-    author: string;
-    content: string;
-    description: string;
-    publishedAt: string;
-    source: Source;
-    title: string;
-    url: string;
-    urlToImage: string;
-};
-
+  author: string;
+  content: string;
+  description: string;
+  publishedAt: string;
+  source: Source;
+  title: string;
+  url: string;
+  urlToImage: string;
+}

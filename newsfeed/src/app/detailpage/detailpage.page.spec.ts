@@ -1,15 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { IonicModule } from "@ionic/angular";
 
-import { DetailpagePage } from './detailpage.page';
+import { DetailpagePage } from "./detailpage.page";
 
-describe('DetailpagePage', () => {
+describe("DetailpagePage", () => {
   let component: DetailpagePage;
   let fixture: ComponentFixture<DetailpagePage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DetailpagePage ],
+      declarations: [DetailpagePage],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
