@@ -21,15 +21,20 @@ export class DetailpagePage implements OnInit {
 
   itemSelected: any;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    if (this.router.getCurrentNavigation()) {
+      this.itemSelected = this.router.getCurrentNavigation().extras.state;
+    }
+  }
 
   ngOnInit(): void {
-    this.itemSelected = this.router.getCurrentNavigation().extras.state;
-    this.description = this.itemSelected["item"].description;
-    this.title = this.itemSelected["item"].title;
-    this.urlToImage = this.itemSelected["item"].urlToImage;
-    this.content = this.itemSelected["item"].content;
-    this.author = this.itemSelected["item"].author;
-    this.publishedAt = this.itemSelected["item"].publishedAt;
+    if (this.itemSelected != null) {
+      this.description = this.itemSelected["item"].description;
+      this.title = this.itemSelected["item"].title;
+      this.urlToImage = this.itemSelected["item"].urlToImage;
+      this.content = this.itemSelected["item"].content;
+      this.author = this.itemSelected["item"].author;
+      this.publishedAt = this.itemSelected["item"].publishedAt;
+    }
   }
 }
