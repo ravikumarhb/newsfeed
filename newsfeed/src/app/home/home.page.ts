@@ -12,11 +12,11 @@ import { NewsFeed } from "../network/newsfeed";
 export class HomePage {
   newsFeedList: Article[];
   newsFeed: NewsFeed;
+  title = "News Feed";
 
   constructor(private networkService: NetworkService, private router: Router) {}
 
   ionViewWillEnter() {
-    console.log("ionViewWillEnter");
     this.networkService.getNewsFeed().subscribe(newsList => {
       this.newsFeed = newsList;
       this.newsFeedList = this.newsFeed.articles;
