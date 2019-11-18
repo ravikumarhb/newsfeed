@@ -33,6 +33,7 @@ export class DetailpagePage implements OnInit{
       this.urlToImage = this.itemSelected['item'].urlToImage;
       this.content = this.itemSelected['item'].content;
       this.author = this.itemSelected['item'].author;
+      this.publishedAt = this.itemSelected['item'].publishedAt;
     }
   }
 
