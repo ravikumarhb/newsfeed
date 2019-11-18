@@ -21,10 +21,12 @@ export class DetailpagePage implements OnInit {
   itemSelected: any;
 
   constructor(private router: Router) {
-    this.itemSelected = this.router.getCurrentNavigation().extras.state;
+    // this.itemSelected = this.router.getCurrentNavigation().extras.state;
   }
 
   ngOnInit(): void {
+    this.itemSelected = this.router.getCurrentNavigation().extras.state;
+
     for (const key in this.itemSelected) {
       this.description = this.itemSelected["item"].description;
       this.title = this.itemSelected["item"].title;

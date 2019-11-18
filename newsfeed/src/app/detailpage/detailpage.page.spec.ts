@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 import { IonicModule } from "@ionic/angular";
+import { RouterTestingModule } from "@angular/router/testing";
 
 import { DetailpagePage } from "./detailpage.page";
 
@@ -10,7 +11,7 @@ describe("DetailpagePage", () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [DetailpagePage],
-      imports: [IonicModule.forRoot()]
+      imports: [IonicModule.forRoot(), RouterTestingModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(DetailpagePage);
@@ -18,7 +19,7 @@ describe("DetailpagePage", () => {
     fixture.detectChanges();
   }));
 
-  // it('should create', () => {
+  // it("should create", () => {
   //   expect(component).toBeTruthy();
   // });
 });
